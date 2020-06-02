@@ -1,0 +1,348 @@
+/* Global */
+body {
+  font: 100%/1.5 Lucida Grande;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 85%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.bold-style {
+  font-weight: bold;
+}
+
+.container-fluid-75 {
+  width: 85%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-fluid-footer {
+  width: 75%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.flex-container-showcase {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-container-footer {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.center-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding: 25px;
+  border-radius: 20px;
+}
+
+.align-vert {
+  display: flex;
+  align-items: center;
+}
+
+.wrap {
+  display: flex;
+}
+
+header {
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  padding-top: 0.8%;
+  min-height: 15%;
+}
+
+header a {
+  text-decoration: none;
+  /* text-transform: uppercase; */
+  color: rgb(200, 200, 200);
+  font-size: 145%;
+}
+
+header #header-link {
+  color: rgb(0, 0, 0);
+  font-size: 150%;
+}
+
+header a:hover {
+  color: rgb(115, 115, 115);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+header li {
+  float: left;
+  display: inline;
+  padding: 0 10px 0 10px;
+  color: rgb(200, 200, 200);
+}
+header #branding {
+  float: left;
+  color: #000000;
+}
+
+header #branding h1 {
+  margin: 0;
+}
+
+header nav {
+  float: right;
+  margin-top: 10px;
+  color: rgb(200, 200, 200);
+}
+
+header .current a {
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+
+#showcase {
+  min-height: 85%;
+}
+
+#showcase li {
+  display: inline;
+  margin: 20px;
+  color: rgb(115, 115, 115);
+  vertical-align: middle;
+}
+
+#showcase .image {
+  color: rgb(200, 200, 200);
+  min-width: 45%;
+  max-width: 50%;
+  height: auto;
+  margin: 20px;
+  /* border-radius: 25px; */
+}
+
+#showcase .image-art {
+  color: rgb(200, 200, 200);
+  float: left;
+  min-width: 100%;
+  max-width: 100%;
+  margin: 2%;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#showcase .image-art-2 {
+  color: rgb(200, 200, 200);
+  float: left;
+  min-width: 100px;
+  max-width: 100px;
+  margin: 2%;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#showcase .streaming-image {
+  display: inline;
+  margin: 10px;
+  border-radius: 25px;
+}
+
+#showcase .vertical-image {
+  max-height: 100%;
+  margin: 2%;
+  max-width: 100%;
+}
+
+#showcase iframe {
+  /* min-width: 30%; */
+  width: 100%;
+  margin: 2%;
+  float: left;
+}
+
+#showcase .image a:hover {
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+}
+
+footer {
+  background: transparent;
+  color: rgb(0, 0, 0);
+  min-height: 15%;
+  margin-top: 0.5%;
+  margin-bottom: 1%;
+}
+
+footer a {
+  color: rgb(200, 200, 200);
+  text-decoration: none;
+  font-size: 105%;
+}
+
+footer a:hover {
+  color: rgb(115, 115, 115);
+}
+
+footer .image {
+  vertical-align: middle;
+  text-align: center;
+  color: rgb(200, 200, 200);
+  width: 30px;
+}
+
+#horizontal-rule {
+  margin-left: 4%;
+  margin-right: 4%;
+  background-color: rgb(100, 100, 100);
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type="text"],
+select,
+textarea {
+  width: 100%; /* Full width */
+  height: 50%;
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 6px; /* Bottom margin */
+  /* resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type="submit"] {
+  background-color: #4286f4;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type="submit"]:hover {
+  background-color: #3a79e0;
+}
+
+#subject,
+#fname,
+#lname {
+  margin-top: -10px;
+}
+
+@media (max-width: 600px) {
+  .container-fluid-75 {
+    width: 95%;
+  }
+
+  header #branding,
+  header nav,
+  header nav li {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  header {
+    margin-bottom: -20px;
+  }
+
+  header nav {
+    font-size: 95%;
+  }
+
+  #showcase iframe {
+    width: 95%;
+  }
+
+  #showcase .streaming-image {
+    margin-left: 25px;
+  }
+
+  .wrap {
+    flex-direction: column;
+  }
+
+  .center-text {
+    text-align: center;
+    font-size: 95%;
+    margin: 2%;
+  }
+}
+
+@media (max-width: 786px) {
+  .container-fluid-75 {
+    padding: 0px;
+    width: 95%;
+  }
+
+  header #branding,
+  header nav,
+  header nav li {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+
+  header {
+    margin-bottom: -20px;
+  }
+
+  header nav {
+    font-size: 95%;
+  }
+
+  .wrap {
+    flex-direction: column;
+  }
+
+  #showcase iframe {
+    width: 95%;
+  }
+
+  #showcase .streaming-image {
+    margin-left: 20px;
+  }
+
+  .center-text {
+    text-align: center;
+    font-size: 95%;
+    margin: 2%;
+  }
+}
+
+@media (min-width: 786px) {
+  /* MAYBE DO THIS  */
+}

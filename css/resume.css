@@ -1,0 +1,80 @@
+
+.resume-container {
+  width: 85%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  border-style: solid;
+  border-width: 20px;
+  border-color: #ACCEE9;
+}
+
+#resume-title {
+font-size: 200%;
+color: #45546B;
+}
+
+#horizontal-rule-main {
+  background-color: #45546B;
+  width: 100%;
+  height: 2px;
+}
+
+#horizontal-rule-minor {
+  background-color: #7F7F7F;
+  width: 100%;
+  height: 1px;
+}
+
+.resume-heading {
+color: #45546B;
+font-size: 125%;
+}
+
+.resume-bullet-title {
+  color: 	#7F7F7F;
+  font-size: 110%;
+}
+
+.resume-text {
+color: 	#7F7F7F;
+font-size: 100%;
+margin-left: 15%;
+}
+
+.resume-summary {
+color: 	#7F7F7F;
+font-size: 100%;
+text-align: center;
+}
+
+.underline {
+  text-decoration: underline;
+  color: 	#7F7F7F;
+}
+
+.link-to-download a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(200, 200, 200) !important;
+  font-size: 100%;
+}
+.link-to-download a:hover {
+  color: rgb(115, 115, 115);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media(max-width: 600px) {
+  .resume-container {
+    width: 95%;
+  }
+}
+
+@media(max-width: 768px) {
+  .resume-container {
+    width: 95%;
+  }
+}
