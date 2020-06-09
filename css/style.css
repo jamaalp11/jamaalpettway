@@ -23,6 +23,22 @@ ul {
   font-weight: bold;
 }
 
+.space {
+ margin-top:5%;
+ margin-bottom: 2%;
+}
+
+.button-style {
+  border-radius: 5px;
+  border-width: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #3a79e0;
+  color: #fff;
+}
+
 .container-fluid-75 {
   width: 85%;
   padding-right: 15px;
@@ -37,6 +53,10 @@ ul {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+
+.top-padding {
+  margin-top: 50px;
 }
 
 .flex-container-showcase {

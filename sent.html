@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="./css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="keywords" content="genesis, music">
-  <meta name"description" content="Jamaal's website for music and/or art">
+  <meta name="description" content="Jamaal's website for music and/or art">
   <link rel="icon" href="./images/devil-logo.png">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
@@ -37,7 +37,22 @@
 
 
   <div class="container">
-    Thanks =)
+    <div class="text-center">
+      <h5>Message Sent Successfully</h5>
+      <p>Feel free to keep looking by using some links to get you going.</p>
+    </div>
+    <div class="d-flex top-padding">
+      <div class="col text-center">
+        <button onclick="goHome()" class="button-style">Home</button>
+      </div>
+      <div class="col text-center">
+        <button onclick="goArt()" class="button-style">Art</button>
+      </div>
+      <div class="col text-center">
+        <button onclick="goMusic()" class="button-style">Music</button>
+      </div>
+      <div class="space"></div>
+    </div>
   </div>
 
   <!-- FOOTER AREA -->
@@ -58,6 +73,18 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    function goHome() {
+      location.href = '/index.html';
+    }
+    function goArt() {
+      location.href = '/art.html';
+    }
+    function goMusic() {
+      location.href = '/music.html';
+    }
+  </script>
 
 </body>
 
