@@ -190,8 +190,17 @@ header .current a {
 }
 
 #showcase .streaming-image {
-  display: inline;
-  margin: 10px;
+  /* display: inline; */
+  margin-top: 5px;
+  margin-left: 2.5px;
+  margin-right: 10px;
+  border-radius: 25px;
+}
+
+#showcase .streaming-image-2 {
+  /* display: inline; */
+  margin-top: 5px;
+  margin-left: 5px;
   border-radius: 25px;
 }
 
