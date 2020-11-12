@@ -7,10 +7,12 @@ html {
 }
 body {
   margin: 0;
+  /* marginTop: 5%; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: hsla(0, 0%, 0%, 0.8);
   font-family: georgia, serif;
+    font: 100%/1.5 Lucida Grande;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -19,6 +21,189 @@ body {
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
+body.light-mode {
+  /* background-color: #f8f9fa; */
+  background-image: linear-gradient(#f8f9fa 91.5%,#8a8b8f);
+  color: #000;
+  transition: all 0.3s ease;
+}
+body.dark-mode {
+  /* background-color: #111216; */
+  background-image: linear-gradient(#111216 91.5%,#52535a);
+
+  color: #fff;
+  transition: all 0.3s ease;
+}
+body.light-mode #text {
+  background-color: #f8f9fa;
+  color: #000;
+  transition: all 0.3s ease;
+}
+body.dark-mode #text {
+  background-color: #111216;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+body.light-mode nav {
+  background-color: #f8f9fa;
+  color: #000;
+  transition: all 0.3s ease;
+}
+body.dark-mode nav {
+  background-color: #111216;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+body.light-mode nav li :hover {
+  background-color: #e9ecef !important;
+  border-radius: 0.5em;
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+  transition: background-color 0.3s ease;
+}
+body.dark-mode nav li :hover {
+  background-color: #343a40 !important;
+  border-radius: 0.25em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  transition: background-color 0.3s ease;
+}
+
+body.light-mode footer .icon {
+  filter: invert(0%);
+  color: #000;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+body.dark-mode footer .icon {
+  filter: invert(100%);
+  color: #000;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+body.light-mode .jumbotron {
+  background-color: #e9ecef !important;
+  transition: all 0.5s ease !important;
+}
+
+body.dark-mode .jumbotron {
+  background-color: #343a40 !important;
+  transition: all 0.5s ease !important;
+}
+body.light-mode .card {
+  background-color: #fff !important;
+  transition: all 0.5s ease !important;
+}
+
+body.dark-mode .card {
+  background-color: #343a40 !important;
+  transition: all 0.5s ease !important;
+}
+
+body.light-mode .highlight {
+  color: #949494;
+  transition: all 0.5s ease;
+}
+body.dark-mode .highlight {
+  color: #57575a;
+  transition: all 0.5s ease;
+}
+
+nav span button {
+  outline: none !important;
+}
+
+body.light-mode button {
+  color: #949494;
+  transition: all 0.3s ease;
+}
+body.dark-mode button {
+  color: #57575a;
+  transition: all 0.3s ease;
+}
+body.light-mode .link {
+  color: #000;
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+body.dark-mode .link {
+  color: #fff;
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+body.light-mode .link :hover {
+  color: #000;
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+body.dark-mode .link :hover {
+  color: #fff;
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+body.light-mode button :active {
+  color: #000;
+}
+body.dark-mode button :active {
+  color: #fff;
+}
+body.light-mode hr {
+  background: #73737d;
+  transition: all 0.3s ease;
+}
+body.dark-mode hr {
+  background: #4c4d54;
+  transition: all 0.3s ease;
+}
+body.light-mode .image-art {
+  box-shadow: 1px 5px 10px 3px rgba(0,0,0,0.5);
+  transition: all 0.5s ease;
+}
+body.dark-mode .image-art {
+  box-shadow: 1px 6px 10px 1px rgba(131, 131, 131, 0.5);
+  transition: all 0.5s ease;
+}
+body.light-mode .image-art:hover {
+  box-shadow: 0px 10px 15px 6px rgba(0,0,0,0.50);
+  transform: translate(0, -0.5%);
+  transition: all 0.5s ease;
+}
+body.dark-mode .image-art:hover {
+  box-shadow: 0px 10px 15px 2px rgba(131, 131, 131, 0.5);
+  transform: translate(0, -0.5%);
+  transition: all 0.5s ease;
+}
+
+body.light-mode .button {
+  border-style: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+body.dark-mode .button {
+  filter: invert(100%);
+  border-style: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+body .toggle-button {
+  border-style: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+body.light-mode .button :hover {
+  background-color: #57575a !important;
+}
+body.dark-mode .button :hover {
+  background-color: #61676d !important;
+}
+
 article,
 aside,
 details,
@@ -590,6 +775,99 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+
+.align-vert {
+  display: flex;
+  align-items: center;
+}
+
+.wrap {
+  display: flex;
+}
+
+footer {
+  background: transparent;
+  color: rgb(0, 0, 0);
+  min-height: 15%;
+  margin-top: 0.5%;
+  margin-bottom: 1%;
+}
+
+footer a {
+  color: rgb(200, 200, 200);
+  text-decoration: none;
+  font-size: 105%;
+}
+
+footer a:hover {
+  color: rgb(115, 115, 115);
+}
+
+footer .image {
+  vertical-align: middle;
+  text-align: center;
+  color: rgb(200, 200, 200);
+  width: 30px;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type="text"],
+select,
+textarea {
+  width: 100%; /* Full width */
+  height: 50%;
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 6px; /* Bottom margin */
+  /* resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+body.light-mode input[type="submit"] {
+  background-color: #343a40 !important;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+body.dark-mode input[type="submit"] {
+  background-color: #f8f9fa !important;
+  color: #000;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+body.light-mode input[type="submit"]:hover {
+  background-color: #3a79e0;
+}
+
+body.dark-mode input[type="submit"]:hover {
+  background-color: #3a79e0;
+}
+
+@media (max-width: 600px) {
+  .wrap {
+    flex-direction: column;
+  }
+
+}
+
+@media (max-width: 786px) {
+  .wrap {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 786px) {
+  /* MAYBE DO THIS  */
+}
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
