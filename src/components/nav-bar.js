@@ -11,14 +11,17 @@ const Header = () => {
   const { pathname } = useLocation();
 
   return (
-    <nav className="navbar sticky-top navbar-expand-md navbar-light">
+    <nav className="navbar sticky-top navbar-expand-lg navbar-light">
       <h4 className="nav-item" style={{ marginTop: '-0.1em' }}>
         <Link to="/" className="link">
           Jamaal <span className="highlight">Pettway</span>
         </Link>
       </h4>
+      {/* <div className="nav-item" id="text" style={{ marginTop: '-0.5em', float: "right" }}>
+        <ThemeButton />
+      </div> */}
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
+        <span className="navbar-toggler-icon .custom-navbar-toggler"></span>
       </button>
       <div className="collapse navbar-collapse pt-1" id="navbarSupportedContent">
         <div className="navbar-nav mr-auto">
@@ -39,10 +42,10 @@ const Header = () => {
           <li className={getClasses(pathname, '/contact')} id="text" style={navItemStyles}>
             <Link className="nav-link text-center" to="/contact" id="text">Contact</Link>
           </li>
-          <span className="nav-item" id="text" style={{ marginTop: '-0.3em' }}>
-            <ThemeButton />
-          </span>
         </div>
+      </div>
+      <div id="text" style={{ marginTop: '-0.75em' }}>
+        <ThemeButton />
       </div>
     </nav>
   );

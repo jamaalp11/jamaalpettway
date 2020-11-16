@@ -73,11 +73,11 @@ const ArtPage = () => {
         /> */}
         {layout === 'grid' && artNames.map(name => (
           <Fragment key={name}>
-            <div className="col-sm-12 align-vert wrap">
-              <div className="col-sm-6">
+            <div className="row d-flex align-items-center">
+              <div className="col-md">
                 <ArtImageRef imgName={name} />
               </div>
-              <div className="col-sm-6 text-center">
+              <div className="col-md text-center">
                 <div className="card shadow mx-5 py-5">
                   {artNodes[Object.keys(artNodes).find(artNode => name.includes(artNode))]}
                 </div>
@@ -86,35 +86,8 @@ const ArtPage = () => {
             <br /><br />
           </Fragment>
         ))}
-        {layout === 'slide' &&
-          <div className="carousel slide" dataRide="carousel">
-            <div className="carousel-inner">
-              {artNames.map((name, index) => (
-                <div className={`carousel-item ${index === 0 && 'active'}`}>
-                  <div className="d-block w-100">
-                    <ArtImageRef imgName={name} />
-                  </div>
-                  {/* <div className="col-sm-6 text-center">
-                    {artNodes[Object.keys(artNodes).find(artNode => name.includes(artNode))]}
-                  </div> */}
-                </div>
-              ))}
-            </div>
-          </div>
-        }
-        {layout === 'collection' && artNames.map(name => (
-          <Fragment key={name}>
-            <div className="col-sm-12 align-vert wrap">
-              <div className="col-sm-6">
-                <ArtImageRef imgName={name} />
-              </div>
-              <div className="col-sm-6 text-center" style={{ marginLeft: '3em' }}>
-                {artNodes[Object.keys(artNodes).find(artNode => name.includes(artNode))]}
-              </div>
-            </div>
-            <br /><br />
-          </Fragment>
-        ))}
+        {/* {layout === 'slide' && }
+        {layout === 'collection' && } */}
       </div>
     </Layout>
   );
@@ -227,7 +200,8 @@ const ArtImageRef = ({ imgName }) => {
   `);
 
   return <Img
-    fixed={data[imgName].childImageSharp.fixed}
+    fixed={data[imgName].childImageSharp.fixed ? data[imgName].childImageSharp.fixed : null}
+    fluid={data[imgName].childImageSharp.fluid ? data[imgName].childImageSharp.fluid : null}
     alt={`${imgName}-art`}
     style={imageStyles}
     className="image-art"
@@ -241,9 +215,6 @@ ArtImageRef.propTypes = {
 const imageStyles = {
   color: 'rgb(200, 200, 200)',
   float: 'left',
-  // minWidth: '100%',
-  // maxWidth: '100 %',
-  // margin: '2%',
   verticalAlign: 'middle',
   textAlign: 'center',
 }

@@ -21,18 +21,24 @@ body {
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
+.slick-slide {
+  margin: 5px;
+}
+.slick-list {
+  margin: -5px;
+}
+
 body.light-mode {
-  /* background-color: #f8f9fa; */
-  background-image: linear-gradient(#f8f9fa 91.5%,#8a8b8f);
+  background-color: #f8f9fa;
+  /* background-image: linear-gradient(#f8f9fa 91.5%,#8a8b8f); */
   color: #000;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 body.dark-mode {
-  /* background-color: #111216; */
-  background-image: linear-gradient(#111216 91.5%,#52535a);
-
+  background-color: #111216;
+  /* background-image: linear-gradient(#111216 91.5%,#52535a); */
   color: #fff;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 body.light-mode #text {
   background-color: #f8f9fa;
@@ -47,12 +53,12 @@ body.dark-mode #text {
 body.light-mode nav {
   background-color: #f8f9fa;
   color: #000;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 body.dark-mode nav {
   background-color: #111216;
   color: #fff;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 body.light-mode nav li :hover {
@@ -92,6 +98,22 @@ body.dark-mode .jumbotron {
   background-color: #343a40 !important;
   transition: all 0.5s ease !important;
 }
+body.light-mode .mobile-nav {
+  background-color: #000 !important;
+  transition: all 0.5s ease !important;
+}
+body.light-mode .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(0,0,0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+body.dark-mode .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(233, 236, 239)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+body.dark-mode .mobile-nav {
+  background-color: #e9ecef !important;
+  transition: all 0.5s ease !important;
+}
+
 body.light-mode .card {
   background-color: #fff !important;
   transition: all 0.5s ease !important;
@@ -776,15 +798,6 @@ pre tt:after {
   content: "";
 }
 
-.align-vert {
-  display: flex;
-  align-items: center;
-}
-
-.wrap {
-  display: flex;
-}
-
 footer {
   background: transparent;
   color: rgb(0, 0, 0);
@@ -849,23 +862,6 @@ body.light-mode input[type="submit"]:hover {
 
 body.dark-mode input[type="submit"]:hover {
   background-color: #3a79e0;
-}
-
-@media (max-width: 600px) {
-  .wrap {
-    flex-direction: column;
-  }
-
-}
-
-@media (max-width: 786px) {
-  .wrap {
-    flex-direction: column;
-  }
-}
-
-@media (min-width: 786px) {
-  /* MAYBE DO THIS  */
 }
 
 @media only screen and (max-width: 480px) {

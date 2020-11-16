@@ -9,13 +9,13 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <div className="container-fluid mt-4 font-weight-light">
-      <div className="jumbotron shadow">
-        <div className="col-sm-12 d-flex align-items-center">
-          <div className="col-sm-6">
+      <div className="jumbotron shadow mb-0">
+        <div className="row align-items-center">
+          <div className="col-md">
             <ImageRef imgName="MainPhoto" />
           </div>
-          <div className="col-sm-6 text-justify">
-            <h2 className="font-weight-normal">Bio</h2>
+          <div className="col-md text-justify">
+            <h2 className="font-weight-normal mt-3">Bio</h2>
             Jamaal is a textile artist from Atlanta, Georgia. He attended Georgia State
             University where he obtained his BFA in Textiles. He is also apart of the Gee’s
             Bend Quilting guild from Boykin, Alabama. Jamaal uses garment construction,
@@ -28,10 +28,10 @@ const IndexPage = () => (
           Jamaal Pettway is an artist; he does what he wants because he is an artist!
         </div>
       </div>
-      <div className="col-sm-12 d-flex px-0">
-        <div className="col-sm-7">
+      <div className="row">
+        <div className="col-lg-7 mt-5">
           <div className="card shadow p-2">
-            <div className="card-body mb-3">
+            <div className="card-body">
               <h2 className="card-text text-center font-weight-normal mb-4 mt-1">Artist Statement</h2>
               {statements.map(statement => (
                 <p key={statement} className="text-justify">{statement}</p>
@@ -39,24 +39,24 @@ const IndexPage = () => (
             </div>
           </div>
         </div>
-        <div className="col-sm-5">
+        <div className="col-lg-5 mt-5">
           <div className="card shadow p-2">
             <div className="card-body">
               <p className="card-text text-center font-weight-normal">
                 Genesis Album - 2019
               </p>
             </div>
-            <iframe height="600" scrolling="no" frameBorder="no" allow="autoplay" title="genesis"
+            <iframe height="545" scrolling="no" frameBorder="no" allow="autoplay" title="genesis"
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/787200789&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true" />
           </div>
-          <div className="col-sm-12 d-flex p-0 mt-2">
-            <div className="card shadow col-sm-6 py-3 px-3 mr-2">
+          <div className="row p-0">
+            <div className="card shadow col-sm p-3 mt-3 mr-2 ml-3">
               <p className="card-text text-center font-weight-normal">
                 Unbearable
               </p>
               <ImageRef imgName="Art1" />
             </div>
-            <div className="card shadow col-sm-6 py-3 px-3">
+            <div className="card shadow col-sm p-3 mt-3 ml-2 mr-3">
               <p className="card-text text-center font-weight-normal">
                 A Woman's Worth
               </p>
@@ -105,22 +105,22 @@ const ImageRef = ({ imgName }) => {
     query {
       MainPhoto: file(relativePath: {eq: "Website-Photo-2.jpg" }) {
       childImageSharp {
-      fixed(width: 400) {
-        ...GatsbyImageSharpFixed
+      fluid(maxWidth: 400) {
+        ...GatsbyImageSharpFluid
       }
     }
   }
     Art1: file(relativePath: { eq: "Close Bear-2.jpg" }) {
     childImageSharp {
-      fixed(width: 200, height: 150) {
-        ...GatsbyImageSharpFixed
+      fluid(maxWidth: 200, maxHeight: 150) {
+        ...GatsbyImageSharpFluid
       }
     }
   }
     Art2: file(relativePath: { eq: "Grafitti Blue-2.jpg" }) {
     childImageSharp {
-      fixed(width: 200, height: 150) {
-        ...GatsbyImageSharpFixed
+      fluid(maxWidth: 200, maxHeight: 150) {
+        ...GatsbyImageSharpFluid
       }
     }
   }
@@ -129,7 +129,7 @@ const ImageRef = ({ imgName }) => {
 
   return (
     <Img
-      fixed={data[imgName].childImageSharp.fixed}
+      fluid={data[imgName].childImageSharp.fluid}
       alt={`${imgName}-photo`}
       className={imgName === 'MainPhoto' ? 'shadow-lg rounded' : 'shadow'}
     />);

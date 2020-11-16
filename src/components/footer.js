@@ -8,9 +8,9 @@ const Footer = () => {
     <footer style={{
       marginTop: '4em',
     }}>
-      <div className="navbar-nav mr-auto mb-0 col-sm-12 align-vert wrap">
+      <div className="navbar-nav mr-auto mb-0 col-sm-12">
         <div className="col-sm-12">
-          <ul style={{ listStyle: 'none', float: 'right', fontSize: '0.9em' }}>
+          <ul className="" style={{ listStyle: 'none', float: 'right', fontSize: '0.9em' }}>
             <li className="nav-item">
               <a
                 href="https://www.youtube.com/watch?v=oa-ANf6_p_c&list=OLAK5uy_kSdzESLcyujuOoXwU62cTRt-prAFjTr-c"
