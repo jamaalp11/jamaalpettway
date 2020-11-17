@@ -77,8 +77,8 @@ const ArtPage = () => {
               <div className="col-md">
                 <ArtImageRef imgName={name} />
               </div>
-              <div className="col-md text-center">
-                <div className="card shadow mx-5 py-5">
+              <div className="col-md align-items-center my-5">
+                <div className="card shadow mx-5 py-5 text-center">
                   {artNodes[Object.keys(artNodes).find(artNode => name.includes(artNode))]}
                 </div>
               </div>
@@ -100,99 +100,99 @@ const ArtImageRef = ({ imgName }) => {
     query {
     Inslaved1: file(relativePath: { eq: "Picture1.jpg" }) {
         childImageSharp {
-          fixed(width: 458, height: 616) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 458, maxHeight: 616) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       Inslaved2: file(relativePath: { eq: "Picture2.jpg" }) {
         childImageSharp {
-          fixed(width: 458, height: 615) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 458, maxHeight: 615) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       Inslaved3: file(relativePath: { eq: "Picture3.jpg" }) {
         childImageSharp {
-          fixed(width: 458, height: 614) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 458, maxHeight: 614) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       Inslaved4: file(relativePath: { eq: "Picture4.jpg" }) {
         childImageSharp {
-          fixed(width: 458, height: 603) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 458, maxHeight: 603) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       Unbearable1: file(relativePath: { eq: "Front Bear.jpg" }) {
         childImageSharp {
-          fixed(width: 458, height: 642) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 458, maxHeight: 642) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       Unbearable2: file(relativePath: { eq: "Side bear.jpg" }) {
         childImageSharp {
-          fixed(width: 458, height: 641) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 458, maxHeight: 641) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       Unbearable3: file(relativePath: { eq: "Close Bear.jpg" }) {
         childImageSharp {
-          fixed(width: 458, height: 327) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 458, maxHeight: 327) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       BlueFace: file(relativePath: { eq: "Blue Face.jpg" }) {
         childImageSharp {
-          fixed(width: 458, height: 458) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 458, maxHeight: 458) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       Mask: file(relativePath: { eq: "Mask.jpg" }) {
         childImageSharp {
-          fixed(width: 458, height: 458) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 458, maxHeight: 458) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       Mask2: file(relativePath: { eq: "IMG_0456.jpg" }) {
         childImageSharp {
-          fixed(width: 458, height: 612) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 458, maxHeight: 612) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       GrafittiBlue: file(relativePath: { eq: "Grafitti Blue.jpg" }) {
         childImageSharp {
-          fixed(width: 458, height: 458) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 458, maxHeight: 458) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       GrafittiRed: file(relativePath: { eq: "Grafitti Red.jpg" }) {
         childImageSharp {
-          fixed(width: 458, height: 458) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 458, maxHeight: 458) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       Painting: file(relativePath: { eq: "Painting.jpg" }) {
         childImageSharp {
-          fixed(width: 458, height: 573) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 458, maxHeight: 573) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
       Painting2: file(relativePath: { eq: "Painting 2.jpg" }) {
         childImageSharp {
-          fixed(width: 458, height: 327) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 458, maxHeight: 327) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -200,8 +200,7 @@ const ArtImageRef = ({ imgName }) => {
   `);
 
   return <Img
-    fixed={data[imgName].childImageSharp.fixed ? data[imgName].childImageSharp.fixed : null}
-    fluid={data[imgName].childImageSharp.fluid ? data[imgName].childImageSharp.fluid : null}
+    fluid={data[imgName].childImageSharp.fluid}
     alt={`${imgName}-art`}
     style={imageStyles}
     className="image-art"
@@ -214,7 +213,6 @@ ArtImageRef.propTypes = {
 
 const imageStyles = {
   color: 'rgb(200, 200, 200)',
-  float: 'left',
-  verticalAlign: 'middle',
-  textAlign: 'center',
+  display: 'block',
+  margin: 'auto',
 }

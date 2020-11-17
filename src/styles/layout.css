@@ -869,3 +869,17 @@ body.dark-mode input[type="submit"]:hover {
     font-size: 100%;
   }
 }
+body footer ul {
+  list-style: none;
+  float: right;
+  font-size: 0.9em; 
+}
+
+@media (max-width: 899) {
+  body footer ul {
+    list-style: none;
+    float: none !important;
+    text-align: center !important;
+    font-size: 0.9em; 
+  }
+}
