@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Link } from "gatsby"
 import { useLocation } from '@reach/router';
 
@@ -9,6 +9,10 @@ const getClasses = (path, item) => path === item ? 'nav-item active' : 'nav-item
 
 const Header = () => {
   const { pathname } = useLocation();
+
+  const navItemStyles = {
+    width: '110px',
+  }
 
   return (
     <nav className="navbar sticky-top navbar-expand-lg navbar-light">
@@ -52,7 +56,3 @@ const Header = () => {
 };
 
 export default Header;
-
-const navItemStyles = {
-  width: window.screen.availWidth / 10,
-}

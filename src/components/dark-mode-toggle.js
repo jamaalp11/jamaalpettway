@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 const DarkModeToggle = () => {
-  const darkMode = useDarkMode(localStorage.getItem('darkMode') || false);
+  const darkMode = useDarkMode(false);
 
   return (
     <span
