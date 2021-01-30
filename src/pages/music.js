@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 // import { Link } from "gatsby"
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import Slider from "react-slick";
+// import Slider from 'infinite-react-carousel';
 
 import Layout from '../components/layout';
 import SEO from "../components/seo"
@@ -11,14 +12,14 @@ import SEO from "../components/seo"
 const SimpleSlider = () => {
   var settings = {
     // dots: true,
-    infinite: true,
+    // infinite: true,
     draggable: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 1250,
-    centerMode: true,
+    // autoplay: true,
+    // autoplaySpeed: 1250,
+    // centerMode: true,
     adaptiveHeight: true,
     // fade: true,
     responsive: [
@@ -53,6 +54,52 @@ const SimpleSlider = () => {
     </div>
   );
 }
+
+// required for build to work with initial lack of window on server-rendering
+// const windowGlobal = typeof window !== 'undefined' && window;
+
+// const SimpleSlider = () => {
+//   const [screenWidth, setScreenWidth] = useState(windowGlobal.innerWidth);
+
+//   useEffect(() => {
+//     const handleResize = () => setScreenWidth(window.innerWidth);
+
+//     window.addEventListener('resize', handleResize);
+//     return () => {
+//       window.removeEventListener('resize', handleResize);
+//     };
+//   }, []);
+
+//   return (
+//     <div style={wrapperStyles}>
+//       <div style={leftFadeStyles}>
+//         <div style={rightFadeStyles}>
+//           <Slider
+//             slidesToShow={screenSlides(screenWidth)}
+//             autoplay
+//             swipe={false}
+//             pauseOnHover={false}
+//             arrows={false}
+//             autoplayScroll={1}
+//             autoplaySpeed={3000}
+//             duration={800}
+//           >
+//             {artworkNames.map((name, index) => (
+//               <div className="card shadow px-2 my-4 align-middle col-md-10" key={name}>
+//                 <p className="card-text text-center font-weight-normal mt-2">
+//                   {songTitles[index]}
+//                 </p>
+//                 <div className="pb-2">
+//                   <ImageRef imgName={name} />
+//                 </div>
+//               </div>
+//             ))}
+//           </Slider>
+//         </div>
+//       </div>
+//     </div>
+//   )
+// }
 
 const MusicPage = () => (
   <Layout>
@@ -177,3 +224,32 @@ ImageRef.propTypes = {
   imgName: PropTypes.string.isRequired,
 };
 
+
+// const wrapperStyles = {
+//   margin: '80px 0 80px',
+//   gridTemplateRows: '.5fr 1.5fr',
+//   gridTemplateColumns: '1fr',
+// }
+
+// const leftFadeStyles = {
+//   gridRow: 2,
+//   height: 'auto',
+//   WebkitMaskImage: 'linear-gradient(to right, black 50%, transparent 100%)',
+//   maskImage: 'linear-gradient(to right, black 50%, transparent 100%)',
+//   width: '100%',
+// }
+
+// const rightFadeStyles = {
+//   gridRow: 2,
+//   height: 'auto',
+//   WebkitMaskImage: 'linear-gradient(to left, black 50%, transparent 100%)',
+//   maskImage: 'linear-gradient(to left, black 50%, transparent 100%)',
+//   width: '100%',
+// }
+
+
+// const screenSlides = (width) => {
+//   if (width >= 1440) return 5;
+//   else if (width >= 755) return 3;
+//   return 1;
+// };
