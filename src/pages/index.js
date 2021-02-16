@@ -43,24 +43,37 @@ const IndexPage = () => (
           <div className="card shadow p-2">
             <div className="card-body">
               <p className="card-text text-center font-weight-normal">
-                Genesis Album - 2019
+                Presented by Big Floyd an Art Experience
               </p>
             </div>
-            <iframe height="545" scrolling="no" frameBorder="no" allow="autoplay" title="genesis"
-              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/787200789&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true" />
+            <iframe height="315" src="https://www.youtube.com/embed/Ezh55454W2A" frameBorder="no" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen title="big-floyd"/>
           </div>
           <div className="row p-0">
             <div className="card shadow col-sm p-3 mt-3 mr-2 ml-3">
               <p className="card-text text-center font-weight-normal">
-                Unbearable
+                Pyramid
               </p>
               <ImageRef imgName="Art1" />
             </div>
             <div className="card shadow col-sm p-3 mt-3 ml-2 mr-3">
               <p className="card-text text-center font-weight-normal">
-                A Woman's Worth
+                Grafitti
               </p>
               <ImageRef imgName="Art2" />
+            </div>
+          </div>
+          <div className="row p-0">
+            <div className="card shadow col-sm p-3 mt-3 mr-2 ml-3">
+              <p className="card-text text-center font-weight-normal">
+                Hair Cube
+              </p>
+              <ImageRef imgName="Art3" />
+            </div>
+            <div className="card shadow col-sm p-3 mt-3 ml-2 mr-3">
+              <p className="card-text text-center font-weight-normal">
+                Inslaved
+              </p>
+              <ImageRef imgName="Art4" />
             </div>
           </div>
         </div>
@@ -89,13 +102,16 @@ const statements = [
         because of the clothes they were wearing. This act has lit a fire within that pushes me to confront
          the tormenting of others.
       `,
+  `Often times in the fashion industry expensive items are seen as more desirable. This notion leaves those who can not afford them in a rut and state of disdain. I want to convert the desires of expensive into rarity. While most expensive items are already ubiquitous there should be some items sold at more economical prices and its value simply come from it’s uniqueness alone. This would allow those who can not afford the pricier items a shot at obtaining a piece.`,
   `Periodically I sell my garments to high bidding buyers, while saving certain ones to
         sell to galleries and individuals who are not as affluent. The feeling that I got when I
         purchased my first expensive item was exhilarating. It was a pair of black and white Saint
         Laurent biker jeans from their Fall 2013 line. It was my first time feeling quality materials,
         impeccable construction and that higher fashion taste. This is something that I want everyone to
          feel at least once in their lifetime.
-      `
+      `,
+  `The human experience is truly like no other. It’s what fuels my rabid curiosity. The life we live comes with no instructions or directions on how to enjoy life; or if you’re even supposed to. Subsequent to my own existentialism, I do believe that it’s important to do what makes you happy. Helping people, being a voice for the marginalized and a resource for those in need is what enthralls me most!`,
+  `Art is the age-old conversation starter. Conversations are what propels society forward.`,
 ];
 
 export default IndexPage
@@ -103,23 +119,37 @@ export default IndexPage
 const ImageRef = ({ imgName }) => {
   const data = useStaticQuery(graphql`
     query {
-      MainPhoto: file(relativePath: {eq: "Website-Photo-2.jpg" }) {
+      MainPhoto: file(relativePath: {eq: "Website-Home.jpg" }) {
       childImageSharp {
       fluid(maxWidth: 400) {
         ...GatsbyImageSharpFluid
       }
     }
   }
-    Art1: file(relativePath: { eq: "Close Bear-2.jpg" }) {
+    Art1: file(relativePath: { eq: "Pyramid-4.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 200, maxHeight: 150) {
+      fluid(maxWidth: 200, maxHeight: 175) {
         ...GatsbyImageSharpFluid
       }
     }
   }
-    Art2: file(relativePath: { eq: "Grafitti Blue-2.jpg" }) {
+    Art2: file(relativePath: { eq: "GrafittiGreen-4.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 200, maxHeight: 150) {
+      fluid(maxWidth: 200, maxHeight: 175) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+    Art3: file(relativePath: { eq: "HairCube-1.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 200, maxHeight: 175) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+    Art4: file(relativePath: { eq: "Picture4.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 200, maxHeight: 175) {
         ...GatsbyImageSharpFluid
       }
     }

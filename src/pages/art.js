@@ -14,7 +14,7 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 // import Toolbar from '../components/toolbar';
 
-const artNames = ['Inslaved1', 'Inslaved2', 'Inslaved3', 'Inslaved4', 'Unbearable1', 'Unbearable2', 'Unbearable3', 'BlueFace', 'Mask', 'Mask2', 'GrafittiBlue', 'GrafittiRed', 'Painting', 'Painting2'];
+const artNames = ['Inslaved1', 'Inslaved2', 'Inslaved3', 'Inslaved4', 'GrafittiGreen',  'GrafittiAll', 'Pyramid1', 'Pyramid2', 'Pyramid3', 'Pyramid4',  'HairCube1', 'HairCube2', 'HairCube3', 'HairCube4', 'BlueFace','Painting', 'Painting2'];
 
 const artNodes = {
   Inslaved: (
@@ -25,28 +25,28 @@ const artNodes = {
       Cotton Pedals<br />
     </Fragment>
   ),
-  Unbearable: (
+  Pyramid: (
     <Fragment>
-      <h2>UnBearable</h2>
-      Stuffed Bears<br />
+      <h2>Pyramid</h2>
+      Bags<br />
+    </Fragment>
+  ),
+  HairCube: (
+    <Fragment>
+      <h2>Hair Cube</h2>
+      Hair Cube<br />
+    </Fragment>
+  ),
+  Grafitti: (
+    <Fragment>
+      <h2>Grafitti</h2>
+      Paint<br />
     </Fragment>
   ),
   BlueFace: (
     <Fragment>
       <h2>Blue Face</h2>
       Acrylic<br />
-    </Fragment>
-  ),
-  Mask: (
-    <Fragment>
-      <h2>Felt Face</h2>
-      Roving<br />
-    </Fragment>
-  ),
-  Grafitti: (
-    <Fragment>
-      <h2>A Woman's Worth</h2>
-      Muslin and Dye<br />
     </Fragment>
   ),
   Painting: (
@@ -86,7 +86,11 @@ const ArtPage = () => {
             <br /><br />
           </Fragment>
         ))}
-        {/* {layout === 'slide' && }
+        {/* {layout === 'slide' &&
+          <BootstrapCarousel
+            items={}
+          />
+      }
         {layout === 'collection' && } */}
       </div>
     </Layout>
@@ -126,56 +130,77 @@ const ArtImageRef = ({ imgName }) => {
           }
         }
       }
-      Unbearable1: file(relativePath: { eq: "Front Bear.jpg" }) {
+      GrafittiGreen: file(relativePath: { eq: "GrafittiGreen-4.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 458, maxHeight: 642) {
+          fluid(maxWidth: 458, maxHeight: 382) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      Unbearable2: file(relativePath: { eq: "Side bear.jpg" }) {
+      GrafittiAll: file(relativePath: { eq: "GrafittiAll.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 458, maxHeight: 641) {
+          fluid(maxWidth: 458, maxHeight: 458) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      Unbearable3: file(relativePath: { eq: "Close Bear.jpg" }) {
+      Pyramid1: file(relativePath: { eq: "Pyramid-1.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 458, maxHeight: 327) {
+          fluid(maxWidth: 458, maxHeight: 344) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      Pyramid2: file(relativePath: { eq: "Pyramid-2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 458, maxHeight: 335) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      Pyramid3: file(relativePath: { eq: "Pyramid-3.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 458, maxHeight: 337) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      Pyramid4: file(relativePath: { eq: "Pyramid-4.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 458, maxHeight: 344) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      HairCube1: file(relativePath: { eq: "HairCube-1.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 458, maxHeight: 344) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      HairCube2: file(relativePath: { eq: "HairCube-2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 458, maxHeight: 491) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      HairCube3: file(relativePath: { eq: "HairCube-3.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 458, maxHeight: 611) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      HairCube4: file(relativePath: { eq: "HairCube-4.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 458, maxHeight: 344) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       BlueFace: file(relativePath: { eq: "Blue Face.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 458, maxHeight: 458) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      Mask: file(relativePath: { eq: "Mask.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 458, maxHeight: 458) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      Mask2: file(relativePath: { eq: "IMG_0456.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 458, maxHeight: 612) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      GrafittiBlue: file(relativePath: { eq: "Grafitti Blue.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 458, maxHeight: 458) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      GrafittiRed: file(relativePath: { eq: "Grafitti Red.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 458, maxHeight: 458) {
             ...GatsbyImageSharpFluid
@@ -216,3 +241,28 @@ const imageStyles = {
   display: 'block',
   margin: 'auto',
 }
+
+const BootstrapCarousel = ({ items }) => (
+  <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" data-interval={1000}>
+    <ol className="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active" />
+      <li data-target="#carouselExampleIndicators" data-slide-to="1" />
+      <li data-target="#carouselExampleIndicators" data-slide-to="2" />
+    </ol>
+    <div className="carousel-inner">
+      {items.map((item, index) => (
+        <div className={index === 0 ? 'carousel-item active' : 'carousel-item'}>
+          {item}
+        </div>
+      ))}
+    </div>
+    <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span className="carousel-control-prev-icon" aria-hidden="true" />
+      <span className="sr-only">Previous</span>
+    </a>
+    <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span className="carousel-control-next-icon" aria-hidden="true" />
+      <span className="sr-only">Next</span>
+    </a>
+  </div>
+);

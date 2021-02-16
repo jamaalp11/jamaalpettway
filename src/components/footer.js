@@ -15,18 +15,31 @@ const Footer = () => {
               <a
                 href="https://www.youtube.com/watch?v=oa-ANf6_p_c&list=OLAK5uy_kSdzESLcyujuOoXwU62cTRt-prAFjTr-c"
                 className="icon"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <ImageRef imgName="Youtube" />
                 <span style={{ paddingTop: '1em' }}>Youtube</span>
               </a>
             </li>
             <li className="nav-item">
-              <a href="https://twitter.com/Jamaalxxxx" className="icon">
-                <ImageRef imgName="Twitter" />
-                Twitter</a>
+              <a
+                href="https://twitter.com/Jamaalxxxx"
+                className="icon"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                  <ImageRef imgName="Twitter" />
+                  Twitter
+              </a>
             </li>
             <li className="nav-item">
-              <a href="https://www.instagram.com/j.a.m.a.a.l/?hl=en" className="icon">
+              <a
+                href="https://www.instagram.com/maalypython/?hl=en"
+                className="icon"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <ImageRef imgName="Instagram" />
                 Instagram
             </a>

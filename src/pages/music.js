@@ -1,105 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 // import { Link } from "gatsby"
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import Slider from "react-slick";
-// import Slider from 'infinite-react-carousel';
 
 import Layout from '../components/layout';
 import SEO from "../components/seo"
-
-const SimpleSlider = () => {
-  var settings = {
-    // dots: true,
-    // infinite: true,
-    draggable: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    // autoplay: true,
-    // autoplaySpeed: 1250,
-    // centerMode: true,
-    adaptiveHeight: true,
-    // fade: true,
-    responsive: [
-      {
-        breakpoint: 900,
-        settings: {
-          slidesToShow: 2,
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-        }
-      },
-    ],
-  };
-  return (
-    <div className="my-3">
-      <Slider {...settings}>
-        {artworkNames.map((name, index) => (
-          <div className="card shadow px-2 my-4 align-middle col-md-10" key={name}>
-            <p className="card-text text-center font-weight-normal mt-2">
-              {songTitles[index]}
-            </p>
-            <div className="pb-2">
-              <ImageRef imgName={name} />
-            </div>
-          </div>
-        ))}
-      </Slider>
-    </div>
-  );
-}
-
-// required for build to work with initial lack of window on server-rendering
-// const windowGlobal = typeof window !== 'undefined' && window;
-
-// const SimpleSlider = () => {
-//   const [screenWidth, setScreenWidth] = useState(windowGlobal.innerWidth);
-
-//   useEffect(() => {
-//     const handleResize = () => setScreenWidth(window.innerWidth);
-
-//     window.addEventListener('resize', handleResize);
-//     return () => {
-//       window.removeEventListener('resize', handleResize);
-//     };
-//   }, []);
-
-//   return (
-//     <div style={wrapperStyles}>
-//       <div style={leftFadeStyles}>
-//         <div style={rightFadeStyles}>
-//           <Slider
-//             slidesToShow={screenSlides(screenWidth)}
-//             autoplay
-//             swipe={false}
-//             pauseOnHover={false}
-//             arrows={false}
-//             autoplayScroll={1}
-//             autoplaySpeed={3000}
-//             duration={800}
-//           >
-//             {artworkNames.map((name, index) => (
-//               <div className="card shadow px-2 my-4 align-middle col-md-10" key={name}>
-//                 <p className="card-text text-center font-weight-normal mt-2">
-//                   {songTitles[index]}
-//                 </p>
-//                 <div className="pb-2">
-//                   <ImageRef imgName={name} />
-//                 </div>
-//               </div>
-//             ))}
-//           </Slider>
-//         </div>
-//       </div>
-//     </div>
-//   )
-// }
 
 const MusicPage = () => (
   <Layout>
@@ -145,66 +51,28 @@ const MusicPage = () => (
           </div>
         </div>
       </div>
-      <SimpleSlider />
     </div>
   </Layout>
 );
 
 export default MusicPage;
 
-const artworkNames = ['Gang', 'PowerUp', 'DigiDownload', 'Tekno', 'SoufCityAngels'];
-const songTitles = ['30/50/60', 'Power Up', 'Digi Download', 'Tekno', 'Souf City Angels'];
 
 const ImageRef = ({ imgName }) => {
   const data = useStaticQuery(graphql`
     query {
-      Gang: file(relativePath: {eq: "305060.jpg" }) {
-      childImageSharp {
-    fluid(maxWidth: 200, maxHeight: 200) {
-      ...GatsbyImageSharpFluid
-    }
-    }
-  }
-      PowerUp: file(relativePath: {eq: "Power Up.jpg" }) {
-      childImageSharp {
-    fluid(maxWidth: 200, maxHeight: 200) {
-      ...GatsbyImageSharpFluid
-    }
-    }
-  }
-      DigiDownload: file(relativePath: {eq: "Digi Download.jpg" }) {
-      childImageSharp {
-    fluid(maxWidth: 200, maxHeight: 200) {
-      ...GatsbyImageSharpFluid
-    }
-    }
-  }
-      Tekno: file(relativePath: {eq: "Tekno.jpg" }) {
-      childImageSharp {
-    fluid(maxWidth: 200, maxHeight: 200) {
-      ...GatsbyImageSharpFluid
-    }
-    }
-  }
-      SoufCityAngels: file(relativePath: {eq: "Souf City Angels.jpg" }) {
-      childImageSharp {
-    fluid(maxWidth: 200, maxHeight: 200) {
-      ...GatsbyImageSharpFluid
-    }
-    }
-  }
-      Spotify: file(relativePath: {eq: "spotify.png" }) {
+    Spotify: file(relativePath: {eq: "spotify.png" }) {
       childImageSharp {
     fixed(width: 132, height: 50) {
       ...GatsbyImageSharpFixed
-    }
+      }
     }
   }
-      AppleMusic: file(relativePath: {eq: "apple-music.png" }) {
+    AppleMusic: file(relativePath: {eq: "apple-music.png" }) {
       childImageSharp {
-    fixed(width: 132, height: 50) {
+      fixed(width: 132, height: 50) {
       ...GatsbyImageSharpFixed
-    }
+      }
     }
   }
 }
@@ -225,31 +93,4 @@ ImageRef.propTypes = {
 };
 
 
-// const wrapperStyles = {
-//   margin: '80px 0 80px',
-//   gridTemplateRows: '.5fr 1.5fr',
-//   gridTemplateColumns: '1fr',
-// }
 
-// const leftFadeStyles = {
-//   gridRow: 2,
-//   height: 'auto',
-//   WebkitMaskImage: 'linear-gradient(to right, black 50%, transparent 100%)',
-//   maskImage: 'linear-gradient(to right, black 50%, transparent 100%)',
-//   width: '100%',
-// }
-
-// const rightFadeStyles = {
-//   gridRow: 2,
-//   height: 'auto',
-//   WebkitMaskImage: 'linear-gradient(to left, black 50%, transparent 100%)',
-//   maskImage: 'linear-gradient(to left, black 50%, transparent 100%)',
-//   width: '100%',
-// }
-
-
-// const screenSlides = (width) => {
-//   if (width >= 1440) return 5;
-//   else if (width >= 755) return 3;
-//   return 1;
-// };
