@@ -14,7 +14,7 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 // import Toolbar from '../components/toolbar';
 
-const artNames = ['Inslaved1', 'Inslaved2', 'Inslaved3', 'Inslaved4', 'GrafittiGreen',  'GrafittiAll', 'Pyramid1', 'Pyramid2', 'Pyramid3', 'Pyramid4',  'HairCube1', 'HairCube2', 'HairCube3', 'HairCube4', 'BlueFace','Painting', 'Painting2'];
+const artNames = ['Inslaved1', 'Inslaved2', 'Inslaved3', 'Inslaved4', 'GrafittiGreen', 'GrafittiBlue', 'GrafittiRed', 'GrafittiAll', 'Pyramid1', 'Pyramid2', 'Pyramid3', 'Pyramid4', 'HairCube1', 'HairCube2', 'HairCube3', 'HairCube4', 'BlueFace', 'Painting', 'Painting2'];
 
 const artNodes = {
   Inslaved: (
@@ -28,19 +28,21 @@ const artNodes = {
   Pyramid: (
     <Fragment>
       <h2>Pyramid</h2>
-      Bags<br />
+      Paper<br />
     </Fragment>
   ),
   HairCube: (
     <Fragment>
       <h2>Hair Cube</h2>
-      Hair Cube<br />
+      Faux Fur<br />
+      &<br />
+      Wood<br />
     </Fragment>
   ),
   Grafitti: (
     <Fragment>
       <h2>Grafitti</h2>
-      Paint<br />
+      Spray Paint on Canvas<br />
     </Fragment>
   ),
   BlueFace: (
@@ -130,9 +132,23 @@ const ArtImageRef = ({ imgName }) => {
           }
         }
       }
-      GrafittiGreen: file(relativePath: { eq: "GrafittiGreen-4.jpg" }) {
+      GrafittiGreen: file(relativePath: { eq: "GrafittiGreen-1.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 458, maxHeight: 382) {
+          fluid(maxWidth: 458, maxHeight: 344) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      GrafittiBlue: file(relativePath: { eq: "GrafittiBlue-1.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 458, maxHeight: 344) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      GrafittiRed: file(relativePath: { eq: "GrafittiRed-1.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 458, maxHeight: 344) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -242,27 +258,27 @@ const imageStyles = {
   margin: 'auto',
 }
 
-const BootstrapCarousel = ({ items }) => (
-  <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" data-interval={1000}>
-    <ol className="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active" />
-      <li data-target="#carouselExampleIndicators" data-slide-to="1" />
-      <li data-target="#carouselExampleIndicators" data-slide-to="2" />
-    </ol>
-    <div className="carousel-inner">
-      {items.map((item, index) => (
-        <div className={index === 0 ? 'carousel-item active' : 'carousel-item'}>
-          {item}
-        </div>
-      ))}
-    </div>
-    <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-      <span className="carousel-control-prev-icon" aria-hidden="true" />
-      <span className="sr-only">Previous</span>
-    </a>
-    <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-      <span className="carousel-control-next-icon" aria-hidden="true" />
-      <span className="sr-only">Next</span>
-    </a>
-  </div>
-);
+// const BootstrapCarousel = ({ items }) => (
+//   <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" data-interval={1000}>
+//     <ol className="carousel-indicators">
+//       <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active" />
+//       <li data-target="#carouselExampleIndicators" data-slide-to="1" />
+//       <li data-target="#carouselExampleIndicators" data-slide-to="2" />
+//     </ol>
+//     <div className="carousel-inner">
+//       {items.map((item, index) => (
+//         <div className={index === 0 ? 'carousel-item active' : 'carousel-item'}>
+//           {item}
+//         </div>
+//       ))}
+//     </div>
+//     <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+//       <span className="carousel-control-prev-icon" aria-hidden="true" />
+//       <span className="sr-only">Previous</span>
+//     </a>
+//     <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+//       <span className="carousel-control-next-icon" aria-hidden="true" />
+//       <span className="sr-only">Next</span>
+//     </a>
+//   </div>
+// );

@@ -29,8 +29,8 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                  <ImageRef imgName="Twitter" />
-                  Twitter
+                <ImageRef imgName="Twitter" />
+                Twitter
               </a>
             </li>
             <li className="nav-item">

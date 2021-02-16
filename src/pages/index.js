@@ -30,9 +30,9 @@ const IndexPage = () => (
       </div>
       <div className="row">
         <div className="col-lg-7 mt-5">
-          <div className="card shadow p-2">
+          <div className="card shadow p-1">
             <div className="card-body">
-              <h2 className="card-text text-center font-weight-normal mb-4 mt-1">Artist Statement</h2>
+              <h2 className="card-text text-center font-weight-normal mb-3">Artist Statement</h2>
               {statements.map(statement => (
                 <p key={statement} className="text-justify">{statement}</p>
               ))}
@@ -40,28 +40,45 @@ const IndexPage = () => (
           </div>
         </div>
         <div className="col-lg-5 mt-5">
-          <div className="card shadow p-2">
+          <div className="card shadow p-2 mb-4">
             <div className="card-body">
               <p className="card-text text-center font-weight-normal">
                 Presented by Big Floyd an Art Experience
               </p>
             </div>
-            <iframe height="315" src="https://www.youtube.com/embed/Ezh55454W2A" frameBorder="no" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen title="big-floyd"/>
+            <iframe height="325" src="https://www.youtube.com/embed/Ezh55454W2A" frameBorder="no" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen title="big-floyd" />
           </div>
+          {/* {space here} */}
           <div className="row p-0">
             <div className="card shadow col-sm p-3 mt-3 mr-2 ml-3">
-              <p className="card-text text-center font-weight-normal">
-                Pyramid
-              </p>
-              <ImageRef imgName="Art1" />
-            </div>
-            <div className="card shadow col-sm p-3 mt-3 ml-2 mr-3">
               <p className="card-text text-center font-weight-normal">
                 Grafitti
               </p>
               <ImageRef imgName="Art2" />
             </div>
+            <div className="card shadow col-sm p-3 mt-3 ml-2 mr-3">
+              <p className="card-text text-center font-weight-normal">
+                Grafitti
+              </p>
+              <ImageRef imgName="Art5" />
+            </div>
           </div>
+          {/* {space here} */}
+          <div className="row p-0">
+            <div className="card shadow col-sm p-3 mt-3 mr-2 ml-3">
+              <p className="card-text text-center font-weight-normal">
+                Grafitti
+              </p>
+              <ImageRef imgName="Art6" />
+            </div>
+            <div className="card shadow col-sm p-3 mt-3 ml-2 mr-3">
+              <p className="card-text text-center font-weight-normal">
+                Pyramid
+              </p>
+              <ImageRef imgName="Art1" />
+            </div>
+          </div>
+          {/* {space here} */}
           <div className="row p-0">
             <div className="card shadow col-sm p-3 mt-3 mr-2 ml-3">
               <p className="card-text text-center font-weight-normal">
@@ -148,6 +165,20 @@ const ImageRef = ({ imgName }) => {
     }
   }
     Art4: file(relativePath: { eq: "Picture4.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 200, maxHeight: 175) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+    Art5: file(relativePath: { eq: "GrafittiBlue-2.jpg" }) {
+    childImageSharp {
+      fluid(maxWidth: 200, maxHeight: 175) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+    Art6: file(relativePath: { eq: "GrafittiRed-3.jpg" }) {
     childImageSharp {
       fluid(maxWidth: 200, maxHeight: 175) {
         ...GatsbyImageSharpFluid
