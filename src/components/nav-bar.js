@@ -41,7 +41,7 @@ const Header = () => {
         </div>
         <div className="navbar-nav">
           <li className="nav-item" style={navItemStyles}>
-            <a href="../docs/Resume.docx" className="nav-link text-center" id="text" download>CV</a>
+            <a href="../docs/cv.docx" className="nav-link text-center" id="text" download>CV</a>
           </li>
           <li className={getClasses(pathname, '/contact')} id="text" style={navItemStyles}>
             <Link className="nav-link text-center" to="/contact" id="text">Contact</Link>
