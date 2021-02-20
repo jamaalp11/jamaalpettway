@@ -1,9 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
 import { useLocation } from '@reach/router';
+import { useStaticQuery, graphql } from 'gatsby';
 
 // relative imports 
 import ThemeButton from './dark-mode-toggle';
+// import downloadFile from '../docs/cv.docx';
 
 const getClasses = (path, item) => path === item ? 'nav-item active' : 'nav-item';
 
@@ -41,7 +43,8 @@ const Header = () => {
         </div>
         <div className="navbar-nav">
           <li className="nav-item" style={navItemStyles}>
-            <a href="src/docs/cv.docx" className="nav-link text-center" id="text" download>CV</a>
+            <ResumeDownload />
+            {/* <a href={downloadFile} className="nav-link text-center" id="text" download>CV</a> */}
           </li>
           <li className={getClasses(pathname, '/contact')} id="text" style={navItemStyles}>
             <Link className="nav-link text-center" to="/contact" id="text">Contact</Link>
@@ -56,3 +59,17 @@ const Header = () => {
 };
 
 export default Header;
+
+
+const ResumeDownload = () => {
+  const data = useStaticQuery(graphql`
+    query DocQuery {
+      file(relativePath: { eq: "cv.docx" }) {
+        publicURL
+        name
+    }
+  }`
+  );
+
+  return <a href={data.file.publicURL} className="nav-link text-center" id="text" download>CV</a>
+};

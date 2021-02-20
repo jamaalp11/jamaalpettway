@@ -138,49 +138,49 @@ const ImageRef = ({ imgName }) => {
     query {
       MainPhoto: file(relativePath: {eq: "Website-Home.jpg" }) {
       childImageSharp {
-      fluid(maxWidth: 400) {
+      fluid(maxWidth: 400, quality: 100) {
         ...GatsbyImageSharpFluid
       }
     }
   }
     Art1: file(relativePath: { eq: "Pyramid-4.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 200, maxHeight: 175) {
+      fluid(maxWidth: 200, maxHeight: 175, quality: 100) {
         ...GatsbyImageSharpFluid
       }
     }
   }
     Art2: file(relativePath: { eq: "GrafittiGreen-4.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 200, maxHeight: 175) {
+      fluid(maxWidth: 200, maxHeight: 175, quality: 100) {
         ...GatsbyImageSharpFluid
       }
     }
   }
     Art3: file(relativePath: { eq: "HairCube-1.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 200, maxHeight: 175) {
+      fluid(maxWidth: 200, maxHeight: 175, quality: 100) {
         ...GatsbyImageSharpFluid
       }
     }
   }
     Art4: file(relativePath: { eq: "Picture4.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 200, maxHeight: 175) {
+      fluid(maxWidth: 200, maxHeight: 175, quality: 100) {
         ...GatsbyImageSharpFluid
       }
     }
   }
     Art5: file(relativePath: { eq: "GrafittiBlue-2.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 200, maxHeight: 175) {
+      fluid(maxWidth: 200, maxHeight: 175, quality: 100) {
         ...GatsbyImageSharpFluid
       }
     }
   }
     Art6: file(relativePath: { eq: "GrafittiRed-3.jpg" }) {
     childImageSharp {
-      fluid(maxWidth: 200, maxHeight: 175) {
+      fluid(maxWidth: 200, maxHeight: 175, quality: 100) {
         ...GatsbyImageSharpFluid
       }
     }
