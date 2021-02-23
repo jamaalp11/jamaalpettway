@@ -1,3 +1,136 @@
+// /**
+//  * Layout component that queries for data
+//  * with Gatsby's useStaticQuery component
+//  *
+//  * See: https://www.gatsbyjs.com/docs/use-static-query/
+//  */
+
+// import React, { Fragment } from "react"
+
+// import Layout from '../components/layout';
+// import SEO from '../components/seo';
+// // import ArtImageRef from '../components/art-image';
+// import ArtSlider from '../components/art-slider';
+
+// const collectionRef = {
+//   Grafitti: ['GrafittiGreen', 'GrafittiBlue', 'GrafittiRed', 'GrafittiAll'],
+//   Pyramid: ['Pyramid1', 'Pyramid2', 'Pyramid3', 'Pyramid4'],
+//   HairCube: ['HairCube1', 'HairCube2', 'HairCube3', 'HairCube4'],
+//   Inslaved: ['Inslaved1', 'Inslaved2', 'Inslaved3', 'Inslaved4'],
+// }
+
+// const artNodes = {
+//   Inslaved: (
+//     <Fragment>
+//       <h2>Inslaved</h2>
+//       Muslin Fabric<br />
+//       &<br />
+//       Cotton Pedals<br />
+//     </Fragment>
+//   ),
+//   Pyramid: (
+//     <Fragment>
+//       <h2>Pyramid</h2>
+//       Paper<br />
+//     </Fragment>
+//   ),
+//   HairCube: (
+//     <Fragment>
+//       <h2>Hair Cube</h2>
+//       Faux Fur<br />
+//       &<br />
+//       Wood<br />
+//     </Fragment>
+//   ),
+//   Grafitti: (
+//     <Fragment>
+//       <h2>Grafitti</h2>
+//       Spray Paint on Canvas<br />
+//     </Fragment>
+//   ),
+//   BlueFace: (
+//     <Fragment>
+//       <h2>Blue Face</h2>
+//       Acrylic<br />
+//     </Fragment>
+//   ),
+//   Painting: (
+//     <Fragment>
+//       <h2>Exercises</h2>
+//     </Fragment>
+//   ),
+// };
+
+// const ArtPage = () => {
+
+//   return (
+//     <Layout>
+//       <SEO title="Art" />
+//       <div className="container-fluid mt-4">
+//         <ArtHeaderSection />
+//         {/* collection 1 */}
+//         <div className="col-lg mt-5">
+//           <div className="card shadow p-1">
+//             <div className="card-body">
+//               {/* <h2 className="card-text text-center font-weight-normal mb-3">Grafitti</h2> */}
+//               <div className="row">
+//                 <div className="col-md-6 p-0" style={{ backgroundColor: 'green', minHeight: '5rem' }}>
+//                   <ArtSlider />
+//                 </div>
+//                 <div className="col-md-6 align-items-center">
+//                   <div className="mx-5 py-5 text-center">
+//                     {artNodes['Grafitti']}
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </Layout>
+//   );
+// }
+
+// export default ArtPage;
+
+
+// const ArtHeaderSection = () => (
+//   <div className="jumbotron shadow mb-0">
+//     <div className="row align-items-center">
+//       <div className="col-md text-justify">
+//         <h2 className="font-weight-normal text-center">Jamaal Pettway the Artist</h2>
+//         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porta et tellus eu consequat. Morbi vulputate leo nisi, eu laoreet lectus vehicula quis. Pellentesque ut eros suscipit, efficitur nunc in, tincidunt ante. In a elementum ipsum. Integer vel quam ligula. Phasellus non ex lorem. Proin id lectus porta, consectetur lectus eu, dictum erat. Duis varius augue nisl, sed lacinia tellus varius id. Nulla nulla elit, sodales eget nisi non, viverra varius dui. Etiam tincidunt diam eu mi gravida viverra.
+//           </div>
+//     </div>
+//     <hr className="my-4" />
+//     <h4 className="font-weight-normal text-center mb-4">Collections</h4>
+//     <div className="text-center row d-flex">
+//       <div className="text-center col-md">
+//         <a>Grafitti</a>
+//       </div>
+//       <div className="text-center col-md">
+//         <a>Pyramid</a>
+//       </div>
+//       <div className="text-center col-md">
+//         <a>Dear Black Quilts</a>
+//       </div>
+//       <div className="text-center col-md">
+//         <a>Hair Cube</a>
+//       </div>
+//       <div className="text-center col-md">
+//         <a>Inslaved</a>
+//       </div>
+//       <div className="text-center col-md">
+//         <a>Blue Face</a>
+//       </div>
+//       <div className="text-center col-md">
+//         <a>Excercises</a>
+//       </div>
+//     </div>
+//   </div>
+// );
+
+
 /**
  * Layout component that queries for data
  * with Gatsby's useStaticQuery component
@@ -9,12 +142,13 @@ import React, { Fragment } from "react"
 import PropTypes from "prop-types"
 import Img from 'gatsby-image';
 import { useStaticQuery, graphql } from 'gatsby';
+// import Zoom from 'react-medium-image-zoom';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 // import Toolbar from '../components/toolbar';
 
-const artNames = ['Inslaved1', 'Inslaved2', 'Inslaved3', 'Inslaved4', 'GrafittiGreen', 'GrafittiBlue', 'GrafittiRed', 'GrafittiAll', 'Pyramid1', 'Pyramid2', 'Pyramid3', 'Pyramid4', 'HairCube1', 'HairCube2', 'HairCube3', 'HairCube4', 'BlueFace', 'Painting', 'Painting2'];
+const artNames = ['BlackQuiltF', 'BlackQuiltM', 'GrafittiGreenFull', 'GrafittiGreen', 'GrafittiBlue', 'GrafittiRed', 'GrafittiAll', 'Pyramid1', 'Pyramid2', 'Pyramid3', 'Pyramid4', 'HairCube1', 'HairCube2', 'HairCube3', 'HairCube4', 'Inslaved1', 'Inslaved2', 'Inslaved3', 'Inslaved4', 'BlueFace', 'Painting', 'Painting2'];
 
 const artNodes = {
   Inslaved: (
@@ -43,6 +177,14 @@ const artNodes = {
     <Fragment>
       <h2>Grafitti</h2>
       Spray Paint on Canvas<br />
+    </Fragment>
+  ),
+  BlackQuilt: (
+    <Fragment>
+      <h2>Dear Black Quilts</h2>
+      Cotton Fabric<br />
+      &<br />
+      Painted Ink<br />
     </Fragment>
   ),
   BlueFace: (
@@ -128,6 +270,13 @@ const ArtImageRef = ({ imgName }) => {
       Inslaved4: file(relativePath: { eq: "Picture4.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 458, maxHeight: 603, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      GrafittiGreenFull: file(relativePath: { eq: "GrafittiGreen-4.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 458, maxHeight: 382, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -233,6 +382,20 @@ const ArtImageRef = ({ imgName }) => {
       Painting2: file(relativePath: { eq: "Painting 2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 458, maxHeight: 327, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      BlackQuiltF: file(relativePath: { eq: "db quilt pink.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 458, maxHeight: 344, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      BlackQuiltM: file(relativePath: { eq: "db quilt.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 458, maxHeight: 372, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }

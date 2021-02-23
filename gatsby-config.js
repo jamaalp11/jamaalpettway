@@ -21,6 +21,20 @@ module.exports = {
         path: `${__dirname}/src/docs`,
       },
     },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              linkImagesToOriginal: false,
+            },
+          },
+          `gatsby-remark-images-zoom`,
+        ],
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

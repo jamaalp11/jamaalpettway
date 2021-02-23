@@ -14,9 +14,10 @@ const Footer = () => {
             <li className="nav-item">
               <a
                 href="https://www.youtube.com/watch?v=oa-ANf6_p_c&list=OLAK5uy_kSdzESLcyujuOoXwU62cTRt-prAFjTr-c"
-                className="icon"
+                className="icon align-items-center"
                 target="_blank"
                 rel="noopener noreferrer"
+                style={{ lineHeight: '20px' }}
               >
                 <ImageRef imgName="Youtube" />
                 <span style={{ paddingTop: '1em' }}>Youtube</span>
@@ -30,7 +31,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
               >
                 <ImageRef imgName="Twitter" />
-                Twitter
+                <span style={{ marginTop: '-2px' }}>Twitter</span>
               </a>
             </li>
             <li className="nav-item">

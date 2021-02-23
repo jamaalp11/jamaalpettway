@@ -9,7 +9,7 @@ import SEO from "../components/seo"
 
 const MusicPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Music" />
     <div className="container-fluid mt-4 font-weight-light">
       <div className="jumbotron shadow">
         <div className="row align-items-center">

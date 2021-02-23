@@ -5,7 +5,6 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 // relative imports 
 import ThemeButton from './dark-mode-toggle';
-// import downloadFile from '../docs/cv.docx';
 
 const getClasses = (path, item) => path === item ? 'nav-item active' : 'nav-item';
 
@@ -39,6 +38,9 @@ const Header = () => {
           </li>
           <li className={getClasses(pathname, '/art')} style={navItemStyles}>
             <Link className="nav-link text-center" to="/art" id="text">Art</Link>
+          </li>
+          <li className={getClasses(pathname, '/videos')} style={navItemStyles}>
+            <Link className="nav-link text-center" to="/videos" id="text">Videos</Link>
           </li>
         </div>
         <div className="navbar-nav">
