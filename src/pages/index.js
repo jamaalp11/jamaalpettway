@@ -34,7 +34,7 @@ const IndexPage = () => (
             <div className="card-body">
               <h3 className="card-text text-center font-weight-normal mb-3">Artist Statement</h3>
               {statements.map(statement => (
-                <p key={statement} className="text-justify" style={{ lineHeight: '28px'}}>{statement}</p>
+                <p key={statement} className="text-justify" style={{ lineHeight: '28px' }}>{statement}</p>
               ))}
             </div>
             <span style={{ marginTop: '-8px' }} />
@@ -55,10 +55,10 @@ const IndexPage = () => (
           />
           <div className="mt-4">
             <VideoHighlightRow
-            title="Dear Black Quilt a Torturous Art"
-            alt="dear-black-quilts"
-            src="https://www.youtube.com/embed/AgAINpjetk4"
-          />
+              title="Dear Black Quilt a Torturous Art"
+              alt="dear-black-quilts"
+              src="https://www.youtube.com/embed/AgAINpjetk4"
+            />
           </div>
           {/* {space here} */}
           <ArtHighlightRow
@@ -78,18 +78,18 @@ export default IndexPage;
 const ArtHighlightRow = ({ firstTitle, firstImg, secondTitle, secondImg }) => (
   <div className="row p-0">
     <div className="card shadow col-sm p-3 mt-0 mr-2 ml-3">
-    <p className="card-text text-center font-weight-normal">
-      {firstTitle}
-    </p>
-    <ImageRef imgName={firstImg} />
+      <p className="card-text text-center font-weight-normal">
+        {firstTitle}
+      </p>
+      <ImageRef imgName={firstImg} />
+    </div>
+    <div className="card shadow col-sm p-3 mt-0 ml-2 mr-3">
+      <p className="card-text text-center font-weight-normal">
+        {secondTitle}
+      </p>
+      <ImageRef imgName={secondImg} />
+    </div>
   </div>
-  <div className="card shadow col-sm p-3 mt-0 ml-2 mr-3">
-    <p className="card-text text-center font-weight-normal">
-      {secondTitle}
-    </p>
-    <ImageRef imgName={secondImg} />
-  </div>
-</div>
 );
 
 const VideoHighlightRow = ({ title, height = 315, src, alt }) => (
@@ -134,7 +134,7 @@ const ImageRef = ({ imgName }) => {
       }
     }
   }
-    Art4: file(relativePath: { eq: "Picture4.jpg" }) {
+    Art4: file(relativePath: { eq: "Inslaved4.png" }) {
     childImageSharp {
       fluid(maxWidth: 200, maxHeight: 175, quality: 100) {
         ...GatsbyImageSharpFluid

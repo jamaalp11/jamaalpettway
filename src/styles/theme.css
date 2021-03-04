@@ -1,0 +1,136 @@
+body.light-mode {
+  background-color: #f8f9fa;
+  /* background-image: linear-gradient(#f8f9fa 91.5%,#8a8b8f); */
+  color: #000;
+  transition: background-color 0.3s ease;
+}
+body.dark-mode {
+  background-color: #111216;
+  /* background-image: linear-gradient(#111216 91.5%,#52535a); */
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+body.light-mode #text {
+  background-color: #f8f9fa;
+  color: #000;
+  transition: all 0.3s ease;
+}
+body.dark-mode #text {
+  background-color: #111216;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+body.light-mode footer .icon {
+  filter: invert(0%);
+  color: #000;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+body.dark-mode footer .icon {
+  filter: invert(100%);
+  color: #000;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+body.light-mode .jumbotron {
+  background-color: #e9ecef !important; /* e9ecef */
+  transition: all 0.5s ease !important;
+}
+
+body.dark-mode .jumbotron {
+  background-color: #343a40 !important; /* 343a40 */
+  transition: all 0.5s ease !important;
+}
+
+body.light-mode .card {
+  background-color: #e9ecef !important;
+  transition: all 0.5s ease !important;
+}
+
+body.dark-mode .card {
+  background-color: #343a40 !important;
+  transition: all 0.5s ease !important;
+}
+
+body.light-mode .highlight {
+  color: #949494;
+  transition: all 0.5s ease;
+}
+body.dark-mode .highlight {
+  color: #57575a;
+  transition: all 0.5s ease;
+}
+
+
+body.light-mode button {
+  color: #949494;
+  transition: all 0.3s ease;
+}
+body.dark-mode button {
+  color: #57575a;
+  transition: all 0.3s ease;
+}
+body.light-mode .link {
+  color: #000;
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+body.dark-mode .link {
+  color: #fff;
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+body.light-mode .link :hover {
+  color: #262626;
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+body.dark-mode .link :hover {
+  color: #efefef;
+  transition: all 0.5s ease;
+  text-decoration: none;
+}
+body.light-mode button :active {
+  color: #000;
+}
+body.dark-mode button :active {
+  color: #fff;
+}
+body.light-mode hr {
+  background: #73737d;
+  transition: all 0.3s ease;
+}
+body.dark-mode hr {
+  background: #4c4d54;
+  transition: all 0.3s ease;
+}
+
+body.light-mode .button {
+  border-style: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+body.dark-mode .button {
+  filter: invert(100%);
+  border-style: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+body .toggle-button {
+  border-style: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+body.light-mode .button :hover {
+  background-color: #57575a !important;
+}
+body.dark-mode .button :hover {
+  background-color: #61676d !important;
+}
