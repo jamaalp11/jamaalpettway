@@ -65,7 +65,7 @@ a {
 }
 a:active,
 a:hover {
-  outline-width: 0;
+  outline-width: 0.5;
 }
 abbr[title] {
   border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);

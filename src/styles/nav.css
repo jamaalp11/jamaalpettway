@@ -1,12 +1,12 @@
 body.light-mode nav {
   background-color: #f8f9fa;
   color: #000;
-  transition: background-color 0.5s ease !important;
+  transition: background-color 0.3s ease !important;
 }
 body.dark-mode nav {
   background-color: #111216;
   color: #fff;
-  transition: background-color 0.5s ease !important;
+  transition: background-color 0.3s ease !important;
 }
 
 body.light-mode nav li :hover {

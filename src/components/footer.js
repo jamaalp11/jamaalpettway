@@ -86,7 +86,10 @@ const ImageRef = ({ imgName }) => {
     <Img
       fixed={data[imgName].childImageSharp.fixed}
       alt={`${imgName}-art`}
-      style={{ marginRight: '0.5em' }}
+      style={{
+        marginRight: '0.5em',
+        verticalAlign: 'middle',
+      }}
     />
   );
 };

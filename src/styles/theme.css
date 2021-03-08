@@ -88,7 +88,7 @@ body.light-mode .link :hover {
   text-decoration: none;
 }
 body.dark-mode .link :hover {
-  color: #efefef;
+  color: #bfbfbf;
   transition: all 0.5s ease;
   text-decoration: none;
 }

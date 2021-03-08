@@ -34,12 +34,12 @@ const ArtPage = () => {
             <div className="card shadow p-1">
               <div className="card-body">
                 <div className="row d-flex align-items-center">
-                  <div className="col-lg-7 order-lg-1 order-sm-2 p-0 art-container">
+                  <div className="col-lg-7 order-lg-1 order-sm-2 order-xs-2 p-0 art-container">
                     <ArtSlider
                       images={collectionRef[collection]}
                     />
                   </div>
-                  <div className="col-lg-5 order-lg-2 order-sm-1 align-items-center">
+                  <div className="col-lg-5 order-lg-2 order-sm-1  order-xs-1 align-items-center">
                     <div className="mx-5 py-5 text-center">
                       {artNodes[collection]}
                     </div>
@@ -67,23 +67,24 @@ const ArtHeaderSection = () => (
     </div>
     <hr className="my-4" /> */}
     <h2 className="font-weight-normal text-center mb-4">Collections</h2>
+    <hr className="my-4" />
     <div className="text-center row d-flex">
-      <div className="text-center col-md">
+      <div className="text-center col-md link">
         <a href="#BlackQuilt" className="link">Dear Black Quilts</a>
       </div>
-      <div className="text-center col-md">
+      <div className="text-center col-md link">
         <a href="#Grafitti" className="link">Grafitti</a>
       </div>
-      <div className="text-center col-md">
+      <div className="text-center col-md link">
         <a href="#Pyramid" className="link">Pyramid</a>
       </div>
-      <div className="text-center col-md">
+      <div className="text-center col-md link">
         <a href="#HairCube" className="link">Hair Cube</a>
       </div>
-      <div className="text-center col-md">
+      <div className="text-center col-md link">
         <a href="#Inslaved" className="link">Inslaved</a>
       </div>
-      <div className="text-center col-md">
+      <div className="text-center col-md link">
         <a href="#Paintings" className="link">Paintings</a>
       </div>
     </div>

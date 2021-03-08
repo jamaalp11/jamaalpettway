@@ -46,6 +46,10 @@ const ArtSlider = ({ images, visibleSlides }) => (
               <Zoom
                 overlayBgColorStart="rgba(0,0,0,1)"
                 overlayBgColorEnd="rgba(0,0,0,1)"
+                style={{
+                  outline: 'none !important',
+                  cursor: 'zoom-in',
+                }}
               >
                 {image !== 'Intro' && <ArtImageRef imgName={image} imageStyles={slideZoomArtStyles} />}
               </Zoom>
@@ -60,7 +64,7 @@ const ArtSlider = ({ images, visibleSlides }) => (
     <ButtonNext className="image-gallery-icon image-gallery-right-nav next-button-styles">
       <SVG icon="right" viewBox="6 0 12 24" />
     </ButtonNext>
-    <div className="row mx-0">
+    <div className="row mx-0 mobile-hide">
       {images.map((image, index) => (
         <Dot key={image} slide={index} className="col-sm p-0 dot-styles">
           {image === 'Intro' && (
@@ -95,18 +99,20 @@ ArtSlider.defaultProps = {
 
 const slideZoomArtStyles = {
   color: 'rgb(200, 200, 200)',
+  cursor: 'zoom-in',
   // display: 'block',
   // margin: 'auto',
   width: '100%',
   height: '100%',
+  objectFit: 'contain',
 };
 
 const dotArtStyles = {
-  display: 'block',
-  color: 'rgb(200, 200, 200)',
+  // display: 'block',
+  // color: 'rgb(200, 200, 200)',
   width: '100%',
   height: '100%',
-  // objectFit: 'cover',
-  // objectPosition: '-20% 0',
+  objectFit: 'cover',
+  objectPosition: '0% 25%',
 
 };
