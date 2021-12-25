@@ -42,6 +42,9 @@ const Header = () => {
           <li className={getClasses(pathname, '/videos')} style={navItemStyles}>
             <Link className="nav-link text-center" to="/videos" id="text">Videos</Link>
           </li>
+          <li className="nav-item" style={navItemStyles}>
+            <Link className="nav-link text-center" href="https://www.babelfalls.com" id="text">Shop</Link>
+          </li>
         </div>
         <div className="navbar-nav">
           <li className="nav-item" style={navItemStyles}>

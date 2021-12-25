@@ -16,11 +16,7 @@ const IndexPage = () => (
           </div>
           <div className="col-md text-justify">
             <h2 className="font-weight-normal mt-3">Bio</h2>
-            Jamaal is a textile artist from Atlanta, Georgia. He attended Georgia State
-            University where he obtained his BFA in Textiles. He is also apart of the Gee’s
-            Bend Quilting guild from Boykin, Alabama. Jamaal uses garment construction,
-            sculpture and other mediums and techniques to convey utopic visualizations as
-            well as to combat and counter societal practices.
+            Jamaal is a textile artist from Atlanta, Georgia. He attended Georgia State University where he obtained his BFA in Textiles. He is also a part of the Gee’s Bend Quilting guild from Boykin, Alabama. He is the designer and creator of Babel Falls; a high fashion brand. Jamaal uses garment construction, sculpture and other mediums and techniques to convey utopic visualizations as well as to combat and counter societal practices.
           </div>
         </div>
         <hr className="my-4" />
