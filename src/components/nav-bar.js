@@ -15,6 +15,10 @@ const Header = () => {
     width: '110px',
   }
 
+  const navItemExtendedStyles = {
+    width: '140px',
+  }
+
   return (
     <nav className="navbar sticky-top navbar-expand-lg navbar-light">
       <h4 className="nav-item" style={{ marginTop: '-0.1em' }}>
@@ -42,14 +46,19 @@ const Header = () => {
           <li className={getClasses(pathname, '/videos')} style={navItemStyles}>
             <Link className="nav-link text-center" to="/videos" id="text">Videos</Link>
           </li>
-          <li className="nav-item" style={navItemStyles}>
-            <Link className="nav-link text-center" href="https://www.babelfalls.com" id="text">Shop</Link>
+          <li className="nav-item" style={navItemExtendedStyles}>
+            <Link 
+              className="nav-link text-center babel-falls"
+              href="https://www.babelfalls.com"
+              id="text"
+            >
+                Babel Falls
+            </Link>
           </li>
         </div>
         <div className="navbar-nav">
           <li className="nav-item" style={navItemStyles}>
             <ResumeDownload />
-            {/* <a href={downloadFile} className="nav-link text-center" id="text" download>CV</a> */}
           </li>
           <li className={getClasses(pathname, '/contact')} id="text" style={navItemStyles}>
             <Link className="nav-link text-center" to="/contact" id="text">Contact</Link>
