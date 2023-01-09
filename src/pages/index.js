@@ -38,9 +38,9 @@ const IndexPage = () => (
         </div>
         <div className="col-lg-6 mt-5">
           <VideoHighlightRow
-            title="Presented by Big Floyd an Art Experience"
-            alt="big-floyd"
-            src="https://www.youtube.com/embed/Ezh55454W2A"
+            title="How To Honor Your Inner Child"
+            alt="honor-your-inner-child"
+            src="https://youtu.be/CYI7E4T7piM"
           />
           {/* {space here} */}
           <ArtHighlightRow
