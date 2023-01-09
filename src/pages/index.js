@@ -40,7 +40,7 @@ const IndexPage = () => (
           <VideoHighlightRow
             title="How To Honor Your Inner Child"
             alt="honor-your-inner-child"
-            src="https://youtu.be/CYI7E4T7piM"
+            src="https://www.youtube.com/embed/CYI7E4T7piM"
           />
           {/* {space here} */}
           <ArtHighlightRow
